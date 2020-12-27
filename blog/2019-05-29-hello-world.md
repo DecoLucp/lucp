@@ -10,7 +10,7 @@ tags: [hello, docusaurus]
 
 Welcome to this blog. This blog is created with [**Docusaurus 2 alpha**](https://v2.docusaurus.io/).
 
-<!--truncate-->//下面的点击阅读更多才能看到
+<!--truncate-->
 
 This is a test post.
 
