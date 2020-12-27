@@ -1,184 +1,105 @@
-const path = require("path");
-
 module.exports = {
-  title: "峰华前端工程师",
-  tagline: "帮助你提升前端开发技能",
-  titleDelimiter: "-",
-  url: "https://www.zxuqian.cn",
-  baseUrl: "/",
-  favicon: "img/favicon.ico",
-  organizationName: "zxuqian", // Usually your GitHub org/user name.
-  projectName: "zxuqian.cn", // Usually your repo name.
-  stylesheets: ["https://fonts.font.im/css?family=Raleway:500,700"],
+  title: 'My Site',
+  tagline: 'The tagline of my site',
+  url: 'https://your-docusaurus-test-site.com',
+  baseUrl: '/',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
+  favicon: 'img/favicon.ico',
+  organizationName: 'facebook', // Usually your GitHub org/user name.
+  projectName: 'docusaurus', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: "峰华前端工程师",
+      title: 'My Site',
       logo: {
-        alt: "峰华",
-        src: "img/logo.png",
-        srcDark: "img/logo.png",
+        alt: 'My Site Logo',
+        src: 'img/logo.svg',
       },
       items: [
         {
-          to: "/",
-          label: "博客",
-          position: "right",
-          items: [
-            {
-              label: "前端",
-              to: "tags/前端",
-            },
-            {
-              label: "职业",
-              to: "tags/职业",
-            },
-            {
-              label: "健康",
-              to: "tags/健康",
-            },
-          ],
+          to: 'docs/',
+          activeBasePath: 'docs',
+          label: 'Docs',
+          position: 'left',
         },
+        {to: 'blog', label: 'Blog', position: 'left'},
         {
-          label: "视频",
-          position: "right",
-          to: "docs/videos/videos-intro",
-        },
-        {
-          label: "课程",
-          position: "right",
-          items: [
-            {
-              label: "React 即时通信 UI 开发实战",
-              to: "docs/course/react-chat-ui/react-chat-ui",
-            },
-          ],
-        },
-        {
-          label: "教程",
-          position: "right",
-          items: [
-            {
-              label: "CSS",
-              to: "docs/css/box-model/box-model",
-            },
-          ],
-        },
-        {
-          href: "https://github.com/zxuqian/zxuqian.cn",
-          label: "GitHub",
-          position: "right",
-        },
-        {
-          href: "https://github.com/zxuqian/frontend-questions/issues",
-          label: "社区讨论",
-          position: "right",
+          href: 'https://github.com/facebook/docusaurus',
+          label: 'GitHub',
+          position: 'right',
         },
       ],
     },
     footer: {
-      style: "dark",
+      style: 'dark',
       links: [
-        // {
-        //   title: "Docs",
-        //   items: [
-        //     {
-        //       label: "Style Guide",
-        //       to: "docs/doc1"
-        //     },
-        //     {
-        //       label: "Second Doc",
-        //       to: "docs/doc2"
-        //     }
-        //   ]
-        // },
-        // {
-        //   title: "Community",
-        //   items: [
-        //     {
-        //       label: "Stack Overflow",
-        //       href: "https://stackoverflow.com/questions/tagged/docusaurus"
-        //     },
-        //     {
-        //       label: "Discord",
-        //       href: "https://discordapp.com/invite/docusaurus"
-        //     }
-        //   ]
-        // },
         {
-          title: "Social",
+          title: 'Docs',
           items: [
             {
-              label: "博客",
-              to: "/",
+              label: 'Style Guide',
+              to: 'docs/',
             },
             {
-              label: "GitHub",
-              href: "https://github.com/zxuqian/zxuqian.cn",
-            },
-            {
-              label: "Bilibili 哔哩哔哩",
-              href: "https://space.bilibili.com/302954484",
-            },
-            {
-              label: "网易云课堂",
-              href:
-                "https://study.163.com/course/courseMain.htm?courseId=1210022809&share=2&shareId=480000002172128",
-            },
-            {
-              label: "腾讯课堂",
-              href: "https://ke.qq.com/course/2839093?tuin=3850fdc6",
+              label: 'Second Doc',
+              to: 'docs/doc2/',
             },
           ],
         },
         {
-          title: "友情链接",
+          title: 'Community',
           items: [
             {
-              label: "yuqing521のblog",
-              to: "https://yuqing521.github.io/",
+              label: 'Stack Overflow',
+              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+            },
+            {
+              label: 'Discord',
+              href: 'https://discordapp.com/invite/docusaurus',
+            },
+            {
+              label: 'Twitter',
+              href: 'https://twitter.com/docusaurus',
+            },
+          ],
+        },
+        {
+          title: 'More',
+          items: [
+            {
+              label: 'Blog',
+              to: 'blog',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/facebook/docusaurus',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} 峰华 (张旭乾) Built with Docusaurus.<p>冀ICP备14007097号-3</p>`,
-    },
-    prism: {
-      darkTheme: require("prism-react-renderer/themes/vsDark"),
-      defaultLanguage: "javascript",
+      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
   },
   presets: [
     [
-      "@docusaurus/preset-classic",
+      '@docusaurus/preset-classic',
       {
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/zxuqian/zxuqian.cn/tree/master/docs",
+          sidebarPath: require.resolve('./sidebars.js'),
+          // Please change this to your repo.
+          editUrl:
+            'https://github.com/facebook/docusaurus/edit/master/website/',
         },
         blog: {
-          path: "./blog",
-          routeBasePath: "/",
-          feedOptions: {
-            type: "all",
-            title: "峰华前端工程师",
-            copyright: `Copyright © ${new Date().getFullYear()} 峰华 (张旭乾) Built with Docusaurus.<p>冀ICP备14007097号-3</p>`,
-          },
+          showReadingTime: true,
+          // Please change this to your repo.
+          editUrl:
+            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
-        },
-        sitemap: {
-          cacheTime: 600 * 1000, // 600 sec - cache purge period
-          changefreq: "daily",
-          priority: 0.5,
+          customCss: require.resolve('./src/css/custom.css'),
         },
       },
     ],
-  ],
-  themes: ["@docusaurus/theme-live-codeblock"],
-  plugins: [
-    path.resolve(__dirname, "./src/plugin/plugin-baidu-analytics"),
-    path.resolve(__dirname, "./src/plugin/plugin-baidu-push"),
-    // path.resolve(__dirname, "./src/plugin/plugin-google-adsense"),
   ],
 };
